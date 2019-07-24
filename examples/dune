@@ -1,0 +1,21 @@
+(executables
+    (names Examples)
+    (preprocess (pps lwt_ppx))
+    (package Revery)
+    (public_names Examples)
+    (libraries
+        js_of_ocaml
+        ExampleStubs
+        str
+        Revery
+        flex
+            ))
+(install
+    (section bin)
+    (package Revery)
+    (files Roboto-Regular.ttf FontAwesome5FreeSolid.otf binary.dat outrun-logo.png outrun-icon.png revery-icon.png))
+
+(install
+    (section bin)
+    (package ReveryExampleJs)
+    (files index.html Examples.bc.js gl-matrix-min.js))
